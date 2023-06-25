@@ -1,3 +1,17 @@
+
+
+Follow these exact steps, as I was having the same issue until I did this as stated:
+
+Go to Site Settings > Build & Deploy > Continuous Deployment.
+Go to Build Settings > Edit Settings.
+Edit your Build Command to CI= npm run build (Look at the space between npm run build and =. It is very important to have it).
+In Publish Directory write build.
+Go to Environment > Edit Variables.
+You must write in Key the variable CI and in Value write false.
+Click on Save.
+Go to Deploys and in the second section, click on Trigger Deploy and select Clear Cache and Deploy Site.
+This will solve the bug and now you can have your site deployed. Enjoy!
+
 # Shopify Nuxt Kit
 
 A starter template kit for those looking to use [Shopify](https://www.shopify.com)'s new Cart API with Nuxt.js on [Netlify](https://www.netlify.com).
